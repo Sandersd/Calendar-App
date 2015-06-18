@@ -1,0 +1,29 @@
+<head>
+  <title>Calendar</title>
+</head>
+
+<body>
+  
+	{{#if currentUser}}
+
+  		{{> main}}
+  	{{else}}
+  	<div class="container">
+  		{{> loginButtons}}	
+  	</div>
+
+  	{{/if}}
+</body>
+
+<template name="main">
+	{{#if editing_event}}
+		{{> dialog}}
+	{{/if}}
+  <div class = "container">
+  	<h3>Calendar</h3>
+  	{{> loginButtons}}
+  	<div id="calendar">
+
+  	</div>
+  </div>
+</template>
